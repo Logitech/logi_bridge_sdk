@@ -1,4 +1,4 @@
-# Bridge SDK
+# Logitech Bridge SDK
 
 Draft version 0.1
 
