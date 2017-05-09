@@ -21,10 +21,10 @@ The Bridge SDK is composed of the following elements:
 - A HTC tracker 
 - A SW installer that enables an “overlay” of a 3D VR keyboard
 
-![Image of Bridge Kit](https://address.png)
+![Image of Bridge Kit](logi_bridge_sdk/documentation/pictures/BRIGESDKdescription.png)
 
 ## Setup instructions:
-Follow the instructions contained in this document for the detailed install instructions.
+Follow the instructions contained in this [document](logi_bridge_sdk/documentation/BRIGESDKdescription.pdf) for the detailed install instructions.
 
 
 ## Description of use:
