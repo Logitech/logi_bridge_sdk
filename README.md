@@ -41,7 +41,7 @@ The overlay package is fully compatible with all application that is developed b
 <img src="documentation/pictures/BridgeUI_0.8.3_main.JPG">
 </p>
 
-After launching it will add a system tray icon. You can open it by clicking on it. This UI allows an easy wrapper to the main core Bridge SDK (runs behind the scenes) and allows to overlay a  virtual representation of the keyboard in any VR application game: It acts in fact as an additional “virtual” Headset that has his own view that is virtually placed right in front of the user’s HMD’s view.
+After launching it will add a system tray icon. You can open it by clicking on it. This UI is an easy wrapper to the main core Bridge SDK (running behind the scenes) and allows to overlay a virtual representation of the keyboard in any VR application game: It acts in fact as an additional “virtual” Headset that has his own view that is virtually placed right in front of the user’s HMD’s view.
 
 The keyboard will appear as soon as the associated HTC tracker is turned on (options to toggle visibility are available) and the user will be able to see it "floating" above any app.
 
