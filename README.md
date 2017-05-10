@@ -1,10 +1,8 @@
 # Logitech Bridge SDK
 
-Draft version 0.8.3
-
-Last update May 10th
-
-Contact: bridgesdk@logitech.com
+- BETA version **0.8.3**
+- Last update May 10th
+- Contact: bridgesdk@logitech.com
 
 ## Introduction:
 The Bridge SDK is a Development kit that aims at helping app makers and other SW developers to solve some of the issues arising whenever a person needs to use a Keyboard in VR.
@@ -26,7 +24,9 @@ The Bridge SDK is composed of the following elements:
 </p>
 
 ## Setup instructions:
-We are still working on an installer, so as of now you can simply head to the [installer](https://github.com/Logitech/logi_bridge_sdk/tree/master/installer) folder and download the [zip file](https://github.com/Logitech/logi_bridge_sdk/tree/master/installer/v083_Logitech_Bridge-win32-x64.zip) and unzip it on your machine (in any folder you like).
+We are still working on an installer, so as of now you can simply head to the [installer](https://github.com/Logitech/logi_bridge_sdk/tree/master/installer) folder and download the [zip file](https://github.com/Logitech/logi_bridge_sdk/tree/master/installer/v083_Logitech_Bridge-win32-x64.zip) and unzip it on your machine (in any folder you like). In order to launch/activate the Bridge Overlay SW, you simply launch Logitech_Bridge.exe. from the extracted folder. 
+
+*Note: Remember it is still in beta and the binary is currently unsigned, therefore you might need to unblock/allow it to run manually (depending on which version of Windows you are using).*
 
 Read the supplied [documentation](https://github.com/Logitech/logi_bridge_sdk/tree/master/documentation/BRIGESDKdescription.pdf) for more detailed  instructions.
 
@@ -35,18 +35,23 @@ Read the supplied [documentation](https://github.com/Logitech/logi_bridge_sdk/tr
 
 ### Overlay 3d VR Keyboard
 
-The overlay package is fully compatible with all application that is developed based on STEAM VR (©Valve).
+The overlay package is fully compatible with all application that is developed based on STEAM VR (©Valve). To launch it, double click on Logitech_Bridge.exe contained in the previously unzipped folder.
 
 <p align="center">
 <img src="documentation/pictures/BridgeUI_0.8.3_main.JPG">
 </p>
 
-It is the SW piece that supports the Bridge SDK and allows the user to visualize/overlay a view of the virtual representation of the keyboard in any VR application game: It acts in fact as an additional “virtual” Headset that has his own view that is virtually placed right in front of the user’s HMD’s view.
+After launching it will add a system tray icon. You can open it by clicking on it. This UI allows an easy wrapper to the main core Bridge SDK (runs behind the scenes) and allows to overlay a  virtual representation of the keyboard in any VR application game: It acts in fact as an additional “virtual” Headset that has his own view that is virtually placed right in front of the user’s HMD’s view.
 
-It will render a 3D representation of a G810 keyboard, complete with animations when the keys are pressed.
+The keyboard will appear as soon as the associated HTC tracker is turned on (options to toggle visibility are available) and the user will be able to see it "floating" above any app.
+
+It will render a 3D representation of a G810 keyboard, complete with animations when the keys are pressed. Some different skins are also included.
 
 <p align="center">
 <img src="documentation/pictures/skin_rocks_G810.PNG">
 </p>
 
-The keyboard will appear as soon as the associated tracker is turned on (options to toggle visibility are available) and the user will be able to see it "floating" above any app.
+## Feedback & Bugs:
+We  strongly suggest to use our private GitHub repository for bug reports and features requests. Follow this [link](https://github.com/Logitech/logi_bridge_sdk/issues) and post it there. This will allow easier tracking and followup.
+
+If you have any other generic questions or comments, please feel free to contact us on bridgesdk@logitech.com. 
