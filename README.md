@@ -28,7 +28,7 @@ We are still working on an installer, so as of now you can simply head to the [i
 
 *Note: Remember it is still in beta and the binary is currently unsigned, therefore you might need to unblock/allow it to run manually (depending on which version of Windows you are using).*
 
-Read the supplied [documentation](https://github.com/Logitech/logi_bridge_sdk/tree/master/documentation/BRIGESDKdescription.pdf) for more detailed  instructions.
+Read the supplied [documentation](https://github.com/Logitech/logi_bridge_sdk/tree/master/documentation/BRIGE_SDK_documentation_v1.0.pdf) for more detailed  instructions.
 
 
 ## Functionality:
