@@ -31,7 +31,7 @@ We are still working on an installer, so as of now you can simply head to the [i
 Read the supplied [documentation](https://github.com/Logitech/logi_bridge_sdk/tree/master/documentation/BRIGESDKdescription.pdf) for more detailed  instructions.
 
 
-## Description of use:
+## Functionality:
 
 ### Overlay 3d VR Keyboard
 
