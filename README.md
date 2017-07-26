@@ -38,7 +38,7 @@ Read the supplied [documentation](https://github.com/Logitech/logi_bridge_sdk/tr
 The overlay package is fully compatible with all application that is developed based on STEAM VR (©Valve). To launch it, double click on Logitech_Bridge.exe contained in the previously unzipped folder.
 
 <p align="center">
-<img src="documentation/pictures/BridgeUI_0.8.3_main.JPG">
+<img src="documentation/pictures/BridgeUI_1.0.0_main.jpg">
 </p>
 
 After launching it will add a system tray icon. You can open it by clicking on it. This UI is an easy wrapper to the main core Bridge SDK (running behind the scenes) and allows to overlay a virtual representation of the keyboard in any VR application game: It acts in fact as an additional “virtual” Headset that has his own view that is virtually placed right in front of the user’s HMD’s view.
