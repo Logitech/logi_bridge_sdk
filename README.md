@@ -1,4 +1,4 @@
-# Logitech Bridge SDK
+# (WIP!) Logitech Bridge SDK
 
 - BETA version **1.0.0** (released on July 27th 2017)
 - PREVIOUS: 0.8.3 released on May 10th 2017
