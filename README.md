@@ -33,12 +33,13 @@ Read the supplied [documentation](https://github.com/Logitech/logi_bridge_sdk/tr
 
 ## Functionality:
 
-### Overlay 3d VR Keyboard
+### Keyboard Model Overlay
 
 The overlay package is fully compatible with all application that is developed based on STEAM VR (©Valve). To launch it, double click on Logitech_Bridge.exe contained in the previously unzipped folder.
 
 <p align="center">
 <img src="documentation/pictures/BridgeUI_1.0.0_main.jpg">
+<br><i>fig1. main UI panel of the BridgeSDK</i>
 </p>
 
 After launching it will add a system tray icon. You can open it by clicking on it. This UI is an easy wrapper to the main core Bridge SDK (running behind the scenes) and allows to overlay a virtual representation of the keyboard in any VR application game: It acts in fact as an additional “virtual” Headset that has his own view that is virtually placed right in front of the user’s HMD’s view.
@@ -48,6 +49,7 @@ The keyboard will appear as soon as the associated HTC tracker is turned on (opt
 It will render a 3D representation of a G810 keyboard, complete with animations when the keys are pressed. Some different skins are also included.
 <p align="center">
 <img src="documentation/pictures/overlay_steamvr_homebeta.jpg">
+<br><i>fig2. Keyboard Model ovelay over SteamVR (TM) home beta</i>
 </p>
 
 
@@ -57,6 +59,7 @@ Starting from release 1.0.0, the BridgeSDK also include the ability to overlay y
 
 <p align="center">
 <img src="documentation/pictures/hands_1.jpg">
+<br><i>fig3. Typical representation of hands over the keyboard (mode Ghost)</i>
 </p>
 
 ### API (*NEW)
@@ -64,6 +67,7 @@ Starting from release 1.0.0, the BridgeSDK also include the ability to overlay y
 Starting from release 1.0.0 the BridgeSDK offers the ability to be customized and be interfaced with an API. This is not mandatory, but the VR application can use this API in order to set certain modes, change color, select options for the Keyboard and hands layer. See the related chapter in the documentation file to get more details on that.
 <p align="center">
 <img src="documentation/pictures/api_100.jpg">
+<br><i>fig4. API set available in BridgeSDK</i>
 </p>
 The API uses a Standard C++ interface to a Dynamic Link Library (dll). We plan on releasing a plugin for Unity too in the near feature. There is also a MS Visual Studio sample app that shows how to interface to the BridgeSDK via the API.
 
