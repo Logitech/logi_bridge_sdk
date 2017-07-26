@@ -1,7 +1,7 @@
 # Logitech Bridge SDK
 
-- BETA version **0.8.3**
-- Last update May 10th
+- BETA version **1.0.0**
+- HISTORY: 0.8.3 released on May 10th
 - Contact: bridgesdk@logitech.com
 
 ## Introduction:
@@ -46,10 +46,28 @@ After launching it will add a system tray icon. You can open it by clicking on i
 The keyboard will appear as soon as the associated HTC tracker is turned on (options to toggle visibility are available) and the user will be able to see it "floating" above any app.
 
 It will render a 3D representation of a G810 keyboard, complete with animations when the keys are pressed. Some different skins are also included.
+<p align="center">
+<img src="documentation/pictures/overlay_steamvr_homebeta.jpg">
+</p>
+
+
+### Hands (*NEW)
+
+Starting from release 1.0.0, the BridgeSDK also include the ability to overlay your hands on top of the 3D keyboard model. We believe this is a much needed feature to allow any person to type in VR (touchtypist & non). Please read the related chapter in the documentation file.
 
 <p align="center">
-<img src="documentation/pictures/skin_rocks_G810.PNG">
+<img src="documentation/pictures/hands_1.jpg">
 </p>
+
+### API (*NEW)
+
+Starting from release 1.0.0 the BridgeSDK offers the ability to be customized and be interfaced with an API. This is not mandatory, but the VR application can use this API in order to set certain modes, change color, select options for the Keyboard and hands layer. See the related chapter in the documentation file to get more details on that.
+<p align="center">
+<img src="documentation/pictures/api_100.jpg">
+</p>
+The API uses a Standard C++ interface to a Dynamic Link Library (dll). We plan on releasing a plugin for Unity too in the near feature. There is also a MS Visual Studio sample app that shows how to interface to the BridgeSDK via the API.
+
+
 
 ## Feedback & Bugs:
 We  strongly suggest to use our private GitHub repository for bug reports and features requests. Follow this [link](https://github.com/Logitech/logi_bridge_sdk/issues) and post it there. This will allow easier tracking and followup.
