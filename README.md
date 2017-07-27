@@ -1,6 +1,6 @@
 # (WIP!) Logitech Bridge SDK
 
-- BETA version **1.0.0** (released on July 27th 2017)
+- Alpha version **1.0.0** (released on July 27th 2017)
 - PREVIOUS: 0.8.3 released on May 10th 2017
 - Contact: bridgesdk@logitech.com
 
@@ -8,7 +8,7 @@
 The Bridge SDK is a Development kit that aims at helping app makers and other SW developers to solve some of the issues arising whenever a person needs to use a Keyboard in VR.
 
 ## Motivation:
-The motivation comes from the belief that in some situations the user still needs to use a keyboard to interact with the applications, especially in productivity-driven scenarios but also in games, chat and content browsing. We believe that that keyboard has to be physically present, since it delivers the traditional tactile experience and feedback that people value.
+The motivation comes from the belief that in some situations the user still needs to use a keyboard to interact with applications, especially in productivity-driven scenarios but also in games, chat and content browsing. We believe that that keyboard has to be physically present, since it delivers the traditional tactile experience and feedback that people value.
 
 
 ## The Pieces:
@@ -26,7 +26,7 @@ The Bridge SDK is composed of the following elements:
 ## Setup instructions:
 We are still working on an installer, so as of now you can simply head to the [installer](https://github.com/Logitech/logi_bridge_sdk/tree/master/installer) folder and download the [zip file](https://github.com/Logitech/logi_bridge_sdk/tree/master/installer/v083_Logitech_Bridge-win32-x64.zip) and unzip it on your machine (in any folder you like). In order to launch/activate the Bridge Overlay SW, you simply launch Logitech_Bridge.exe. from the extracted folder. 
 
-*Note: Remember it is still in beta and the binary is currently unsigned, therefore you might need to unblock/allow it to run manually (depending on which version of Windows you are using).*
+*Note: Remember it is still in alpha and the binary is currently unsigned, therefore you might need to unblock/allow it to run manually (depending on which version of Windows you are using).*
 
 Read the supplied [documentation](https://github.com/Logitech/logi_bridge_sdk/tree/master/documentation/BRIGE_SDK_description_v1.0.pdf) for more detailed  instructions.
 
@@ -59,7 +59,7 @@ Starting from release 1.0.0, the BridgeSDK also include the ability to overlay y
 
 <p align="center">
 <img src="documentation/pictures/hands_1.jpg">
-<br><i>fig3. Typical representation of hands over the keyboard (mode Ghost)</i>
+<br><i>fig3. Typical representation of hands over the keyboard (Ghost mode)</i>
 </p>
 
 ### API (*NEW)
