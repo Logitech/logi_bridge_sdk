@@ -69,7 +69,7 @@ Starting from release 1.0.0 the BridgeSDK offers the ability to be customized an
 <img src="documentation/pictures/api_100.jpg">
 <br><i>fig4. API set available in BridgeSDK</i>
 </p>
-The API uses a Standard C++ interface to a Dynamic Link Library (dll). We plan on releasing a plugin for Unity too in the near feature. There is also a MS Visual Studio sample app that shows how to interface to the BridgeSDK via the API.
+The API uses a Standard C++ interface to a Dynamic Link Library (dll). There is a MS Visual Studio sample app as well as a Unity project that shows how to interface to the BridgeSDK via the API.
 
 
 
