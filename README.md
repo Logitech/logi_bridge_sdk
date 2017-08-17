@@ -1,7 +1,7 @@
 # Logitech Bridge SDK
 
-- Alpha version **1.0.0** (released on July 28th 2017)
-- PREVIOUS: 0.8.3 released on May 10th 2017
+- Alpha version **1.0.1** (released on Aug 16th 2017)
+- PREVIOUS: 1.0.0 released on July 28th 2017
 - Contact: bridgesdk@logitech.com
 
 ## Introduction:
@@ -24,7 +24,7 @@ The Bridge SDK is composed of the following elements:
 </p>
 
 ## Setup instructions:
-We are still working on an installer, so as of now you can simply head to the [installer](https://github.com/Logitech/logi_bridge_sdk/tree/master/installer) folder and download the [zip file](https://github.com/Logitech/logi_bridge_sdk/tree/master/installer/v1.0.0_Logitech_BridgeSDK.zip) and unzip it on your machine (in any folder you like). In order to launch/activate the Bridge Overlay SW, you simply launch Logitech_Bridge.exe. from the extracted folder. 
+We are still working on an installer, so as of now you can simply head to the [installer](https://github.com/Logitech/logi_bridge_sdk/tree/master/installer) folder and download the [zip file](https://github.com/Logitech/logi_bridge_sdk/tree/master/installer/v1.0.1_Logitech_BridgeSDK.zip) and unzip it on your machine (in any folder you like). In order to launch/activate the Bridge Overlay SW, you simply launch Logitech_Bridge.exe. from the extracted folder. 
 
 *Note: Remember it is still in alpha and the binary is currently unsigned, therefore you might need to unblock/allow it to run manually (depending on which version of Windows you are using).*
 
@@ -77,3 +77,11 @@ The API uses a Standard C++ interface to a Dynamic Link Library (dll). There is 
 We  strongly suggest to use our private GitHub repository for bug reports and features requests. Follow this [link](https://github.com/Logitech/logi_bridge_sdk/issues) and post it there. This will allow easier tracking and followup.
 
 If you have any other generic questions or comments, please feel free to contact us on bridgesdk@logitech.com. 
+
+
+## Changelog:
+### 1.0.1
+- added splash screen (while loading)
+- Fixed some stability issues when SteamVR is not running
+- Added autosave of Settings (included alignment) when app is being closed
+- automatic lookup for open port for websocket interface
