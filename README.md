@@ -1,4 +1,4 @@
-# Logitech Bridge SDK
+# Logitech G BridgeSDK
 
 - Alpha version **1.0.1** (released on Aug 16th 2017)
 - PREVIOUS: 1.0.0 released on July 28th 2017
