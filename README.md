@@ -17,7 +17,7 @@ The Bridge SDK is composed of the following elements:
 - A Logitech “BRIDGE adapter”
 - A HTC tracker 
 - A SW [installer](https://github.com/Logitech/logi_bridge_sdk/tree/master/installer) that enables an “overlay” of a 3D VR keyboard
-
+- Wiki instructions [page](https://github.com/Logitech/logi_bridge_sdk/wiki)
 <p align="center">
 <img src="documentation/pictures/Bridge_SDK_components.jpg">
 </p>
@@ -27,7 +27,6 @@ If you are interested to get one of those DK (Development Kits), please subscrib
 
 ## Setup instructions:
 There is no need for an installer, so you can simply head to the [installer](https://github.com/Logitech/logi_bridge_sdk/tree/master/installer) folder and download the [zip file](https://github.com/Logitech/logi_bridge_sdk/tree/master/installer/v1.0.1_Logitech_BridgeSDK.zip) and unzip it on your machine (in any folder you like). In order to launch/activate the Bridge Overlay SW, you simply launch Logitech_Bridge.exe. from the extracted folder.
-
 Read the supplied [documentation](https://github.com/Logitech/logi_bridge_sdk/tree/master/documentation/BRIGE_SDK_description_v1.0.pdf) for more detailed instructions.
 If you don't like manuals, have a look at our new instructions video [here](https://github.com/Logitech/logi_bridge_sdk/tree/master/documentation/videos/LOGITECH_BRIDGE_Setup_R1.mp4).
 
@@ -37,20 +36,16 @@ If you don't like manuals, have a look at our new instructions video [here](http
 
 The overlay package is fully compatible with all application that is developed based on STEAM VR (©Valve). To launch it, double click on Logitech_Bridge.exe contained in the previously unzipped folder.
 
-<p align="center">
-<img src="documentation/pictures/BridgeUI_1.0.0_main.jpg">
-<br><i>fig1. main UI panel of the BridgeSDK</i>
-</p>
-
 After launching it will add a system tray icon. You can open it by clicking on it. This UI is an easy wrapper to the main core Bridge SDK (running behind the scenes) and allows to overlay a virtual representation of the keyboard in any VR application game: It acts in fact as an additional “virtual” Headset that has his own view that is virtually placed right in front of the user’s HMD’s view.
 
-The keyboard will appear as soon as the associated HTC tracker is turned on (options to toggle visibility are available) and the user will be able to see it "floating" above any app.
-
-It will render a 3D representation of a G810 keyboard, complete with animations when the keys are pressed. Some different skins are also included.
 <p align="center">
 <img src="https://github.com/Logitech/logi_bridge_sdk/blob/master/documentation/pictures/Logitech_G_Bridge_VR_Keyboard_Hands_A.gif">
 <br><i>fig2. Keyboard Model ovelay in Virtual Desktop</i>
 </p>
+
+The keyboard will appear as soon as the associated HTC tracker is turned on (options to toggle visibility are available) and the user will be able to see it "floating" above any app.
+
+It will render a 3D representation of a G810 keyboard, complete with animations when the keys are pressed. Some different skins are also included.
 
 
 ### Hands
