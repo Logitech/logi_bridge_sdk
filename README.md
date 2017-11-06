@@ -1,7 +1,6 @@
 # Logitech G BridgeSDK
 
-- Alpha version **1.0.1** (released on Aug 16th 2017)
-- PREVIOUS: 1.0.0 released on July 28th 2017
+- Beta version **1.1.0** (released on Nov 8th 2017)
 - Contact: supportsdk@logitech.com
 
 ## Introduction:
@@ -17,16 +16,17 @@ The Bridge SDK is composed of the following elements:
 - A Logitech G810 Keyboard (off-the-shelf)
 - A Logitech “BRIDGE adapter”
 - A HTC tracker 
-- A SW installer that enables an “overlay” of a 3D VR keyboard
+- A SW [installer](https://github.com/Logitech/logi_bridge_sdk/tree/master/installer) that enables an “overlay” of a 3D VR keyboard
 
 <p align="center">
 <img src="documentation/pictures/Bridge_SDK_components.jpg">
 </p>
 
-## Setup instructions:
-We are still working on an installer, so as of now you can simply head to the [installer](https://github.com/Logitech/logi_bridge_sdk/tree/master/installer) folder and download the [zip file](https://github.com/Logitech/logi_bridge_sdk/tree/master/installer/v1.0.1_Logitech_BridgeSDK.zip) and unzip it on your machine (in any folder you like). In order to launch/activate the Bridge Overlay SW, you simply launch Logitech_Bridge.exe. from the extracted folder.
+## Apply for the SDK
+If you are interested to get one of those DK (Development Kits), please subscribe [here](https://goo.gl/CJ16qD).
 
-*Note: Remember it is still in alpha and the binary is currently unsigned, therefore you might need to unblock/allow it to run manually (depending on which version of Windows you are using).*
+## Setup instructions:
+There is no need for an installer, so you can simply head to the [installer](https://github.com/Logitech/logi_bridge_sdk/tree/master/installer) folder and download the [zip file](https://github.com/Logitech/logi_bridge_sdk/tree/master/installer/v1.0.1_Logitech_BridgeSDK.zip) and unzip it on your machine (in any folder you like). In order to launch/activate the Bridge Overlay SW, you simply launch Logitech_Bridge.exe. from the extracted folder.
 
 Read the supplied [documentation](https://github.com/Logitech/logi_bridge_sdk/tree/master/documentation/BRIGE_SDK_description_v1.0.pdf) for more detailed instructions.
 If you don't like manuals, have a look at our new instructions video [here](https://github.com/Logitech/logi_bridge_sdk/tree/master/documentation/videos/LOGITECH_BRIDGE_Setup_R1.mp4).
@@ -48,8 +48,8 @@ The keyboard will appear as soon as the associated HTC tracker is turned on (opt
 
 It will render a 3D representation of a G810 keyboard, complete with animations when the keys are pressed. Some different skins are also included.
 <p align="center">
-<img src="documentation/pictures/overlay_steamvr_homebeta.jpg">
-<br><i>fig2. Keyboard Model ovelay over SteamVR (TM) home beta</i>
+<img src="https://github.com/Logitech/logi_bridge_sdk/blob/master/documentation/pictures/Logitech_G_Bridge_VR_Keyboard_Hands_A.gif">
+<br><i>fig2. Keyboard Model ovelay in Virtual Desktop</i>
 </p>
 
 
@@ -80,6 +80,12 @@ If you have any other generic questions or comments, please feel free to contact
 
 
 ## Changelog:
+### 1.1.0 (Nov 8th 2017)
+- many robustness improvments
+- new align procedure
+- bridge VR setup wizard app
+- new hands segmentation methods
+
 ### 1.0.1 (Aug 16th 2017)
 - added splash screen (while loading)
 - Fixed some stability issues when SteamVR is not running
