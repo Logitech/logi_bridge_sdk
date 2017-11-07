@@ -2,6 +2,7 @@
 
 - Beta version **1.1.0** (released on Nov 8th 2017)
 - Contact: supportsdk@logitech.com
+- Instructions [wiki](https://github.com/Logitech/logi_bridge_sdk/wiki)
 
 ## Introduction:
 The Bridge SDK is a Development kit that aims at helping app makers and other SW developers to solve some of the issues arising whenever a person needs to use a Keyboard in VR.
@@ -17,17 +18,23 @@ The motivation comes from the belief that in some situations the user still need
 ## The Pieces:
 The Bridge SDK is composed of the following elements:
 
-- A Logitech G810 Keyboard (off-the-shelf)
-- A Logitech “BRIDGE adapter”
-- A HTC tracker 
-- A SW [installer](https://github.com/Logitech/logi_bridge_sdk/tree/master/installer) that enables an “overlay” of a 3D VR keyboard
-- Wiki instructions [page](https://github.com/Logitech/logi_bridge_sdk/wiki)
+- A Logitech G810 Orion Spark Keyboard (off-the-shelf)
+- A Logitech G BRIDGE
+- A HTC Vive tracker 
+- A SW [component](https://github.com/Logitech/logi_bridge_sdk/tree/master/installer) that enables an “overlay” of a 3D VR keyboard
+
 <p align="center">
 <img src="documentation/pictures/Bridge_SDK_components.jpg">
 </p>
 
 ## Apply for the SDK
-If you are interested to get one of those DK (Development Kits), please subscribe [here](https://goo.gl/CJ16qD).
+If you have not subscribed yet, and you are interested to get one of those DK (Development Kits), please apply [here](https://goo.gl/CJ16qD).
+
+### Disclaimer:
+Please be aware that this is a BETA version of this SDK and in this current iteration it is purely a Proof of Concept to spark discussion and feedback from you, the development community. You can expect to see bugs and robustness issues, but we are working continuously to fix them. 
+
+### License Agreement
+Downloading this SDK indicates that you have read and accept the terms of the License Agreement for the Logitech G Bridge in [here](https://goo.gl/sReQAk).
 
 ## Setup instructions:
 There is no need for an installer, so you can simply head to the [installer](https://github.com/Logitech/logi_bridge_sdk/tree/master/installer) folder and download the [zip file](https://github.com/Logitech/logi_bridge_sdk/tree/master/installer/v1.0.1_Logitech_BridgeSDK.zip) and unzip it on your machine (in any folder you like). In order to launch/activate the Bridge Overlay SW, you simply launch Logitech_Bridge.exe. from the extracted folder.
