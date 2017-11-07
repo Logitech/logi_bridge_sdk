@@ -30,8 +30,10 @@ The Bridge SDK is composed of the following elements:
 ## Apply for the SDK
 If you have not subscribed yet, and you are interested to get one of those DK (Development Kits), please apply [here](https://goo.gl/CJ16qD).
 
-### Disclaimer:
+### Disclaimer
 Please be aware that this is a BETA version of this SDK and in this current iteration it is purely a Proof of Concept to spark discussion and feedback from you, the development community. You can expect to see bugs and robustness issues, but we are working continuously to fix them. 
+
+By running the software you accept that it will automatically collect anonymous information about how you use our software. We will not collect your name, email, address or any personally identifiable information and all data is anonymized.
 
 ### License Agreement
 Downloading this SDK indicates that you have read and accept the terms of the License Agreement for the Logitech G Bridge in [here](https://goo.gl/sReQAk).
