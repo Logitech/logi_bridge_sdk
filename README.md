@@ -50,7 +50,7 @@ After launching it will add a system tray icon. You can open it by clicking on i
 
 <p align="center">
 <img src="https://github.com/Logitech/logi_bridge_sdk/blob/master/documentation/pictures/Logitech_G_Bridge_VR_Keyboard_Hands_A.gif">
-<br><i>fig2. Keyboard Model ovelay in Virtual Desktop</i>
+<br><i>Keyboard Model ovelay in Virtual Desktop</i>
 </p>
 
 The keyboard will appear as soon as the associated HTC tracker is turned on (options to toggle visibility are available) and the user will be able to see it "floating" above any app.
@@ -64,7 +64,7 @@ Starting from release 1.0.0, the BridgeSDK also include the ability to overlay y
 
 <p align="center">
 <img src="documentation/pictures/hands_1.jpg">
-<br><i>fig3. Typical representation of hands over the keyboard (Ghost mode)</i>
+<br><i>Typical representation of hands over the keyboard (Ghost mode)</i>
 </p>
 
 ### API
@@ -72,7 +72,7 @@ Starting from release 1.0.0, the BridgeSDK also include the ability to overlay y
 Starting from release 1.0.0 the BridgeSDK offers the ability to be customized and be interfaced with an API. This is not mandatory, but the VR application can use this API in order to set certain modes, change color, select options for the Keyboard and hands layer. See the related chapter in the documentation file to get more details on that.
 <p align="center">
 <img src="documentation/pictures/api_100.jpg">
-<br><i>fig4. API set available in BridgeSDK</i>
+<br><i>API set available in BridgeSDK</i>
 </p>
 The API uses a Standard C++ interface to a Dynamic Link Library (dll). There is a MS Visual Studio sample app as well as a Unity project that shows how to interface to the BridgeSDK via the API.
 
