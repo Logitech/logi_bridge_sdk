@@ -37,7 +37,7 @@ Please be aware that this is a BETA version of this SDK and in this current iter
 Downloading this SDK indicates that you have read and accept the terms of the License Agreement for the Logitech G Bridge in [here](https://goo.gl/sReQAk).
 
 ## Setup instructions:
-There is no need for an installer, so you can simply head to the [installer](https://github.com/Logitech/logi_bridge_sdk/tree/master/installer) folder and download the [zip file](https://github.com/Logitech/logi_bridge_sdk/tree/master/installer/v1.0.1_Logitech_BridgeSDK.zip) and unzip it on your machine (in any folder you like). In order to launch/activate the Bridge Overlay SW, you simply launch Logitech_Bridge.exe. from the extracted folder.
+There is no need for an installer, so you can simply head to the [installer](https://github.com/Logitech/logi_bridge_sdk/tree/master/installer) folder and download the [zip file](https://github.com/Logitech/logi_bridge_sdk/tree/master/installer/v1.0.1_Logitech_BridgeSDK.zip) and unzip it on your machine (in any folder you like). In order to launch/activate the Bridge Overlay SW, you simply launch Logitech_Bridge.exe  from the extracted folder.
 Read the supplied [documentation](https://github.com/Logitech/logi_bridge_sdk/tree/master/documentation/BRIGE_SDK_description_v1.0.pdf) for more detailed instructions.
 
 ## Functionality:
