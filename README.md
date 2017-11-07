@@ -21,7 +21,7 @@ The Bridge SDK is composed of the following elements:
 - A Logitech G810 Orion Spark Keyboard (off-the-shelf)
 - A Logitech G BRIDGE
 - A HTC Vive tracker 
-- A SW [component](https://github.com/Logitech/logi_bridge_sdk/tree/master/installer) that enables an “overlay” of a 3D VR keyboard
+- A SW component that enables an “overlay” of a 3D VR keyboard
 
 <p align="center">
 <img src="documentation/pictures/Bridge_SDK_components.jpg">
