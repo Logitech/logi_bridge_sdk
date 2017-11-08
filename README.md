@@ -4,18 +4,23 @@
 - Contact: supportsdk@logitech.com
 - Instructions [wiki](https://github.com/Logitech/logi_bridge_sdk/wiki)
 
-## Introduction:
+<br/>
+
+## Introduction
 The Bridge SDK is a Development kit that aims at helping app makers and other SW developers to solve some of the issues arising whenever a person needs to use a Keyboard in VR.
 
 <p align="center">
 <img src="https://github.com/Logitech/logi_bridge_sdk/blob/master/documentation/pictures/logitech-bridge-mid.jpg">
 </p>
 
-## Motivation:
+<br/>
+
+## Motivation
 The motivation comes from the belief that in some situations the user still needs to use a keyboard to interact with applications, especially in productivity-driven scenarios but also in games, chat and content browsing. We believe that that keyboard has to be physically present, since it delivers the traditional tactile experience and feedback that people value.
 
+<br/>
 
-## The Pieces:
+## The Pieces
 The Bridge SDK is composed of the following elements:
 
 - A Logitech G810 Orion Spark Keyboard (off-the-shelf)
@@ -26,6 +31,8 @@ The Bridge SDK is composed of the following elements:
 <p align="center">
 <img src="documentation/pictures/Bridge_SDK_components.jpg">
 </p>
+
+<br/>
 
 ## Apply for the SDK
 If you have not subscribed yet, and you are interested to get one of those DK (Development Kits), please apply [here](https://goo.gl/CJ16qD).
@@ -38,11 +45,15 @@ By running the software you accept that it will automatically collect anonymous 
 ### License Agreement
 Downloading this SDK indicates that you have read and accept the terms of the License Agreement for the Logitech G Bridge in [here](https://goo.gl/sReQAk).
 
-## Setup instructions:
+<br/>
+
+## Setup instructions
 There is no need for an installer, so you can simply head to the [installer](https://github.com/Logitech/logi_bridge_sdk/tree/master/installer) folder and download the [zip file](https://github.com/Logitech/logi_bridge_sdk/tree/master/installer/v1.0.1_Logitech_BridgeSDK.zip) and unzip it on your machine (in any folder you like). In order to launch/activate the Bridge Overlay SW, you simply launch Logitech_Bridge.exe  from the extracted folder.
 Read the supplied [documentation](https://github.com/Logitech/logi_bridge_sdk/tree/master/documentation/BRIGE_SDK_description_v1.0.pdf) for more detailed instructions.
 
-## Functionality:
+<br/>
+
+## Functionality
 
 ### Keyboard Model Overlay
 
@@ -78,15 +89,16 @@ Starting from release 1.0.0 the BridgeSDK offers the ability to be customized an
 </p>
 The API uses a Standard C++ interface to a Dynamic Link Library (dll). There is a MS Visual Studio sample app as well as a Unity project that shows how to interface to the BridgeSDK via the API.
 
+<br/>
 
-
-## Feedback & Bugs:
+## Feedback & Bugs
 We  strongly suggest to use our private GitHub repository for bug reports and features requests. Follow this [link](https://github.com/Logitech/logi_bridge_sdk/issues) and post it there. This will allow easier tracking and followup.
 
-If you have any other generic questions or comments, please feel free to contact us on supportsdk@logitech.com. 
+If you have any other generic questions or comments, please feel free to contact us on supportsdk@logitech.com.
 
+<br/>
 
-## Changelog:
+## Changelog
 ### 1.1.0 (Nov 8th 2017)
 - many robustness improvments
 - new align procedure
