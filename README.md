@@ -82,12 +82,12 @@ Starting from release 1.0.0, the BridgeSDK also include the ability to overlay y
 
 ### API
 
-Starting from release 1.0.0 the BridgeSDK offers the ability to be customized and be interfaced with an API. This is not mandatory, but the VR application can use this API in order to set certain modes, change color, select options for the Keyboard and hands layer. See the related chapter in the documentation file to get more details on that.
+Starting from release 1.0.0 the BridgeSDK offers the ability to be customized and be interfaced with an API. This is not mandatory, but the VR application can use this API in order to set certain modes, change color, select options for the Keyboard and hands layer. See the related chapter in the documentation or our [Wiki](https://github.com/Logitech/logi_bridge_sdk/wiki/API) to get more details on that.
 <p align="center">
-<img src="documentation/pictures/api_100.jpg">
+<img src="https://github.com/Logitech/logi_bridge_sdk/blob/master/documentation/pictures/api_110.JPG">
 <br><i>API set available in BridgeSDK</i>
 </p>
-The API uses a Standard C++ interface to a Dynamic Link Library (dll). There is a MS Visual Studio sample app as well as a Unity project that shows how to interface to the BridgeSDK via the API.
+The API uses a Standard C++ interface to a Dynamic Link Library (dll). There is a MS Visual Studio sample [app] (https://github.com/Logitech/logi_bridge_sdk/tree/master/samples/BridgeSDKSampleApp) as well as a [Unity project](https://github.com/Logitech/logi_bridge_sdk/tree/master/samples/UnityPlugin/BridgeSDKSampleProject) that shows how to interface to the BridgeSDK via the API.
 
 <br/>
 
