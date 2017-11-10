@@ -5,14 +5,14 @@ This sample project  loads the developer DLL and performs on-demand example API 
 > This client application needs to connect to the Bridge software. Therefore you must have Bridge running prior to executing the samples
 
 Our developer DLL is called “BridgeOverlay_SDK.dll” and has the following dependencies:
-LIBEAY32.dll
-SSLEAY32.dll
-libuv.dll
-uWS.dll
-zlib1.dll
+* LIBEAY32.dll
+* SSLEAY32.dll
+* libuv.dll
+* uWS.dll
+* zlib1.dll
 
 
-**important** 
+**IMPORTANT:** <br/>
 You will get an error if you try to use the developer DLL without calling the Init function first, and call the Shutdown function as well when your application exits. Both code samples illustrate automated init and shutdown.
 
 The developer DLL performs (local) I/O operations. It is therefore recommended that you call the DLL’s functions in a separate thread.
