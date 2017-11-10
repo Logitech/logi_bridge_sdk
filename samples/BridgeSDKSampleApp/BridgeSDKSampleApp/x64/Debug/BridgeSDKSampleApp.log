@@ -1,6 +1,0 @@
-﻿  stdafx.cpp
-  BridgeSDKSampleApp.cpp
-c:\code\seraph_overlay\bridgesdksampleapp\bridgesdksampleapp\bridgesdksampleapp.cpp(44): error C4996: 'kbhit': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _kbhit. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\conio.h(458): note: see declaration of 'kbhit'
-c:\code\seraph_overlay\bridgesdksampleapp\bridgesdksampleapp\bridgesdksampleapp.cpp(45): error C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\conio.h(452): note: see declaration of 'getch'

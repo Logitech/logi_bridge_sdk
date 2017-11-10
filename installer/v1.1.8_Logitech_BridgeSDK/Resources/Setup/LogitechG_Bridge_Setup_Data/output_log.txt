@@ -1,0 +1,16 @@
+[1110/133951:INFO:API.cpp(191)] zfb_init: Started browser
+
+[1110/133951:INFO:API.cpp(193)] zfb_init: Using --enable-system-flash
+
+[1110/134031:INFO:API.cpp(252)] zfb_shutdown called on thread 12828
+
+[1110/134031:ERROR:API.cpp(257)] zfb_shutdown: browser #1 still active
+
+[1110/134031:ERROR:API.cpp(257)] zfb_shutdown: browser #2 still active
+
+[1110/134031:ERROR:API.cpp(257)] zfb_shutdown: browser #3 still active
+
+[1110/134031:ERROR:API.cpp(257)] zfb_shutdown: browser #6 still active
+
+[1110/134031:ERROR:API.cpp(257)] zfb_shutdown: browser #7 still active
+

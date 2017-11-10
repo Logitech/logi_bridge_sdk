@@ -1,0 +1,12 @@
+{
+	"keyboard": "G810",
+	"name": "CrashTest",
+	"textures": [{
+		"filename": "G810_alb.png",
+		"uniform": "mainTexture"
+	},
+	{
+		"filename": "G810_e.png",
+		"uniform": "emissive"
+	}]
+}

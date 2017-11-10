@@ -14,4 +14,6 @@ public class HandsStatusNestedJSON
     public bool visible;
     public int hands_representation;
     public int[] color;
+    public float opacity_level;
+    public float segmentation_threshold;
 }

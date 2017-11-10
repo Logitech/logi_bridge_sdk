@@ -17,7 +17,8 @@
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows:5</UnityBuildTarget>
     <UnityVersion>5.5.2f1</UnityVersion>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
     <LangVersion Condition=" '$(VisualStudioVersion)' != '10.0' ">4</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -79,9 +80,11 @@
     <Compile Include="Assets\BridgeSDK\BridgeEnums.cs" />
     <Compile Include="Assets\BridgeSDK\BridgeSDKUnityPlugin.cs" />
     <Compile Include="Assets\BridgeSDK\HandsFeedbackStatus.cs" />
+    <Compile Include="Assets\BridgeSDK\SupportedKeyboardsServerJSONResponse.cs" />
     <Compile Include="Assets\BridgeSDK\HandsStatusServerJSONResponse.cs" />
     <Compile Include="Assets\BridgeSDK\KeyboardStatus.cs" />
     <Compile Include="Assets\BridgeSDK\KeyboardStatusServerJSONResponse.cs" />
+    <Compile Include="Assets\BridgeSDK\SupportedKeyboards.cs" />
     <Compile Include="Assets\Scripts\BridgeSDKSampleWrapper.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

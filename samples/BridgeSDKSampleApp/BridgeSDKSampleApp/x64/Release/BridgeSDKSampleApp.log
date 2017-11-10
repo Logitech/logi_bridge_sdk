@@ -1,9 +1,0 @@
-﻿  BridgeSDKSampleApp.vcxproj -> C:\code\seraph_overlay\BridgeSDKSampleApp\x64\Release\BridgeSDKSampleApp.exe
-  BridgeSDKSampleApp.vcxproj -> C:\code\seraph_overlay\BridgeSDKSampleApp\x64\Release\BridgeSDKSampleApp.pdb (Full PDB)
-  C:\code\seraph_overlay\BridgeSDKSampleApp\BridgeSDK\x64\Release\LIBEAY32.dll
-  C:\code\seraph_overlay\BridgeSDKSampleApp\BridgeSDK\x64\Release\libuv.dll
-  C:\code\seraph_overlay\BridgeSDKSampleApp\BridgeSDK\x64\Release\SeraphOverlay_Dev_DLL.dll
-  C:\code\seraph_overlay\BridgeSDKSampleApp\BridgeSDK\x64\Release\SSLEAY32.dll
-  C:\code\seraph_overlay\BridgeSDKSampleApp\BridgeSDK\x64\Release\uWS.dll
-  C:\code\seraph_overlay\BridgeSDKSampleApp\BridgeSDK\x64\Release\zlib1.dll
-  6 File(s) copied
