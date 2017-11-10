@@ -1,6 +1,6 @@
 # Logitech G BridgeSDK
 
-- Beta version **1.1.8** (released on Nov 8th 2017)
+- Beta version **1.1.8** (released on Nov 10th 2017)
 - Contact: supportsdk@logitech.com
 - Instructions [wiki](https://github.com/Logitech/logi_bridge_sdk/wiki)
 
@@ -104,7 +104,7 @@ If you have any other generic questions or comments, please feel free to contact
 <br/>
 
 ## Changelog
-### 1.1.0 (Nov 8th 2017)
+### 1.1.8 (Nov 10th 2017)
 - many robustness improvements
 - new align procedure
 - bridge VR setup wizard app
