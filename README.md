@@ -1,6 +1,6 @@
 # Logitech G BridgeSDK
 
-- Beta version **1.1.0** (released on Nov 8th 2017)
+- Beta version **1.1.8** (released on Nov 8th 2017)
 - Contact: supportsdk@logitech.com
 - Instructions [wiki](https://github.com/Logitech/logi_bridge_sdk/wiki)
 
@@ -25,7 +25,7 @@ The Bridge SDK is composed of the following elements:
 
 - A Logitech G810 Orion Spark Keyboard (off-the-shelf)
 - A Logitech G BRIDGE
-- A HTC Vive tracker 
+- A HTC Vive tracker
 - A SW component that enables an “overlay” of a 3D VR keyboard
 
 <p align="center">
@@ -38,7 +38,7 @@ The Bridge SDK is composed of the following elements:
 If you have not subscribed yet, and you are interested to get one of those DK (Development Kits), please apply [here](https://goo.gl/CJ16qD).
 
 ### Disclaimer
-Please be aware that this is a BETA version of this SDK and in this current iteration it is purely a Proof of Concept to spark discussion and feedback from you, the development community. You can expect to see bugs and robustness issues, but we are working continuously to fix them. 
+Please be aware that this is a BETA version of this SDK and in this current iteration it is purely a Proof of Concept to spark discussion and feedback from you, the development community. You can expect to see bugs and robustness issues, but we are working continuously to fix them.
 
 By downloading or using  the Logitech G Bridge SDK, developers accept the SDK License Agreement and agree that Logitech automatically collects anonymous diagnostic and usage data about the software, the Logitech Hardware and developers' computer with a purpose to facilitate the provisions of updates and to improve Logitech products.
 
@@ -48,8 +48,8 @@ Downloading this SDK indicates that you have read and accept the terms of the Li
 <br/>
 
 ## Setup instructions
-There is no need for an installer, so you can simply head to the [installer](https://github.com/Logitech/logi_bridge_sdk/tree/master/installer) folder and download the [zip file](https://github.com/Logitech/logi_bridge_sdk/tree/master/installer/v1.0.1_Logitech_BridgeSDK.zip) and unzip it on your machine (in any folder you like). In order to launch/activate the Bridge Overlay SW, you simply launch Logitech_Bridge.exe  from the extracted folder.
-Read the supplied [documentation](https://github.com/Logitech/logi_bridge_sdk/tree/master/documentation/BRIGE_SDK_description_v1.0.pdf) for more detailed instructions.
+There is no need for an installer, so you can simply head to the [installer](https://github.com/Logitech/logi_bridge_sdk/tree/master/installer) folder and download the [zip file](https://github.com/Logitech/logi_bridge_sdk/archive/Bridge_SDK_v1.1.8_release.zip) and unzip it on your machine (in any folder you like). In order to launch/activate the Bridge Overlay SW, you simply launch Logitech_Bridge.exe  from the extracted folder.
+Read the supplied [documentation](https://github.com/Logitech/logi_bridge_sdk/raw/master/documentation/BRIDGE_SDK_user_manual_1.1.X.pdf) for more detailed instructions.
 
 <br/>
 
@@ -62,7 +62,7 @@ The overlay package is fully compatible with all application that is developed b
 After launching it will add a system tray icon. You can open it by clicking on it. This UI is an easy wrapper to the main core Bridge SDK (running behind the scenes) and allows to overlay a virtual representation of the keyboard in any VR application game: It acts in fact as an additional “virtual” Headset that has his own view that is virtually placed right in front of the user’s HMD’s view.
 
 <p align="center">
-<img src="https://github.com/Logitech/logi_bridge_sdk/blob/master/documentation/pictures/Logitech_G_Bridge_VR_Keyboard_Hands_A.gif">
+<img src="./documentation/pictures/Logitech_G_Bridge_VR_Keyboard_Hands_A.gif">
 <br><i>Keyboard Model ovelay in Virtual Desktop</i>
 </p>
 
@@ -85,7 +85,7 @@ Starting from release 1.0.0, the BridgeSDK also include the ability to overlay y
 Starting from release 1.0.0 the BridgeSDK offers the ability to be customized and be interfaced with an API. This is not mandatory, but the VR application can use this API in order to set certain modes, change color, select options for the Keyboard and hands layer. See the related chapter in the documentation or our [Wiki](https://github.com/Logitech/logi_bridge_sdk/wiki/API) to get more details on that.
 
 <p align="center">
-<img src="https://github.com/Logitech/logi_bridge_sdk/blob/master/documentation/pictures/api_110.JPG">
+<img src="./documentation/pictures/api_110.JPG">
 <br><i>API set available in BridgeSDK</i>
 </p>
 
@@ -105,7 +105,7 @@ If you have any other generic questions or comments, please feel free to contact
 
 ## Changelog
 ### 1.1.0 (Nov 8th 2017)
-- many robustness improvments
+- many robustness improvements
 - new align procedure
 - bridge VR setup wizard app
 - new hands segmentation methods
