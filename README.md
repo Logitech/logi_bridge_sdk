@@ -10,7 +10,7 @@
 The Bridge SDK is a Development kit that aims at helping app makers and other SW developers to solve some of the issues arising whenever a person needs to use a Keyboard in VR.
 
 <p align="center">
-<img src="https://github.com/Logitech/logi_bridge_sdk/blob/master/documentation/pictures/logitech-bridge-mid.jpg">
+<img src="documentation/pictures/Logitech_G_Bridge_VR_Keyboard_Skins_A.gif">
 </p>
 
 <br/>
