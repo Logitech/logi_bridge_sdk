@@ -30,7 +30,7 @@ After you build the project and run the application, you will be able to hit the
 
 * Warning: At this stage of development, in order for an applications to use the developer DLL, you must make sure that:
 
-* It is recommended to compile in 'Release' mode. be aware that 'Debug' mode has still some shortcomings.
-* You deactivated the compiler’s SDL checks: <br/> To deactivate the SDL checks in Visual Studio, open the project’s ‘Configuration Properties’ and under ‘C/C++’ >> ‘General’, set the ‘SDL checks’ to ‘No’. Alternatively, you can manually add the compiler’s flag “/sdl-”.
+* to compile in 'Release' mode. be aware that 'Debug' mode has still some shortcomings.
+* you deactivated the compiler’s SDL checks: <br/> To deactivate the SDL checks in Visual Studio, open the project’s ‘Configuration Properties’ and under ‘C/C++’ >> ‘General’, set the ‘SDL checks’ to ‘No’. Alternatively, you can manually add the compiler’s flag “/sdl-”.
 
 * Please contact supportsdk@logitech.com or reach us via GitHub if you have any question.
