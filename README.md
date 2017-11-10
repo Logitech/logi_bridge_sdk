@@ -40,7 +40,7 @@ If you have not subscribed yet, and you are interested to get one of those DK (D
 ### Disclaimer
 Please be aware that this is a BETA version of this SDK and in this current iteration it is purely a Proof of Concept to spark discussion and feedback from you, the development community. You can expect to see bugs and robustness issues, but we are working continuously to fix them. 
 
-By running the software you accept that it will automatically collect anonymous information about how you use our software. We will not collect your name, email, address or any personally identifiable information and all data is anonymized. This data will not be shared with anyone and is only intended to develop better software and work on the features that people want.
+By downloading or using  the Logitech G Bridge SDK, developers accept the SDK License Agreement and agree that Logitech automatically collects anonymous diagnostic and usage data about the software, the Logitech Hardware and developers' computer with a purpose to facilitate the provisions of updates and to improve Logitech products.
 
 ### License Agreement
 Downloading this SDK indicates that you have read and accept the terms of the License Agreement for the Logitech G Bridge in [here](https://goo.gl/sReQAk).
