@@ -2,6 +2,8 @@
 
 We provide a sample Unity project with some scripts which are required to integrate the DLL (they are located in  “Assets/BridgeSDK”). The libraries in the “Plugins” directory are also required. There is a sample script (in the Scripts directory) which will show you how to use the wrapper.
 
+> IMPORTANT: This client application needs to connect to the Bridge software. Therefore you **must have Bridge running** prior to executing the samples
+
 You can load and run the scene we provided to see a help message displayed in front of the main camera.
 Note:  the shortcuts will output their respective results in the console.
 
