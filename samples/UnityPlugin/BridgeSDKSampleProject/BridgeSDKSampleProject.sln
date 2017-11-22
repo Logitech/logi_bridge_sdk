@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2015
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BridgeSDKSampleProject.CSharp", "BridgeSDKSampleProject.CSharp.csproj", "{6BFD21B4-3A94-043C-8613-F826DA17969B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BridgeSDKSampleProject", "BridgeSDKSampleProject.csproj", "{F7696014-0CEA-B5BB-A0C0-9A2D027E089E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,10 +9,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{6BFD21B4-3A94-043C-8613-F826DA17969B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6BFD21B4-3A94-043C-8613-F826DA17969B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6BFD21B4-3A94-043C-8613-F826DA17969B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6BFD21B4-3A94-043C-8613-F826DA17969B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7696014-0CEA-B5BB-A0C0-9A2D027E089E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7696014-0CEA-B5BB-A0C0-9A2D027E089E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7696014-0CEA-B5BB-A0C0-9A2D027E089E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7696014-0CEA-B5BB-A0C0-9A2D027E089E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

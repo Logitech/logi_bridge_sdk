@@ -1,5 +1,0 @@
-[
-{	"timestamp" : 1510317540207,	"osName" : "Windows",	"osVersion" : "10",	"osBit" : "64",	"osEdition" : "Client",	"cpuNameSpeed" : "Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz",	"cpuArchitecture" : "x64",	"cpuCores" : "8",	"ramSize" : "32.00 GB",	"gpuName" : "NVIDIA GeForce GTX 1060 6GB",	"gpuVersion" : "23.21.13.8792",	"gpuProcessor" : "GeForce GTX 1060 6GB",	"gpuMemory" : "4095.00 MB",	"gpuMode" : "1920 x 1080 x 4294967296 colors",	"gpuArchitecture" : "VGA"	}
-, {	"timestamp" : 1510317540207,	"Logging Started" : 1	}
-, {	"timestamp" : 1510317645443,	"StopUpdate" : 1	}
-]
