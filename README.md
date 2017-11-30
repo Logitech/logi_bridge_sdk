@@ -1,6 +1,6 @@
 # Logitech G BridgeSDK
 
-- Beta version **1.1.11** (released on Nov 22th 2017)
+- Beta version **1.1.15** (released on Nov 30th 2017)
 - Contact: supportsdk@logitech.com
 - Instructions [wiki](https://github.com/Logitech/logi_bridge_sdk/wiki)
 
@@ -48,7 +48,7 @@ Downloading this SDK indicates that you have read and accept the terms of the Li
 <br/>
 
 ## Setup instructions
-There is no need for an installer, so you can simply download the full repository from this [zip file](https://github.com/Logitech/logi_bridge_sdk/archive/Bridge_SDK_v1.1.11_release.zip) and unzip it on your machine (in any folder you like). In order to launch/activate the Bridge Overlay SW, you simply launch Logitech_Bridge.exe from the extracted folder (in sw/vX.X.X_Logitech_BridgeSDK).
+There is no need for an installer, so you can simply download the full repository from this [zip file](https://github.com/Logitech/logi_bridge_sdk/archive/Bridge_SDK_v1.1.15_release.zip) and unzip it on your machine (in any folder you like). In order to launch/activate the Bridge Overlay SW, you simply launch Logitech_Bridge.exe from the extracted folder (in sw/vX.X.X_Logitech_BridgeSDK).
 Read the supplied [documentation](https://github.com/Logitech/logi_bridge_sdk/raw/master/documentation/BRIDGE_SDK_user_manual_1.1.X.pdf) for more detailed instructions.
 
 <br/>
@@ -104,6 +104,9 @@ If you have any other generic questions or comments, please feel free to contact
 <br/>
 
 ## Changelog
+### 1.1.15 (Nov 30th 2017
+- bug fix
+
 ### 1.1.11 (Nov 22th 2017)
 - bug fixes
 - robustness improvements to detect when HMD is not present
