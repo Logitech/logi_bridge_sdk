@@ -1,8 +1,0 @@
-{
-	"keyboard": "G810",
-	"name": "SkinSwitch",
-	"textures": [{
-		"filename": "G810_alb.png",
-		"uniform": "mainTexture"
-	}]
-}
