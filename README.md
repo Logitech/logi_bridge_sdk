@@ -104,7 +104,7 @@ If you have any other generic questions or comments, please feel free to contact
 <br/>
 
 ## Changelog
-### 1.1.15 (Nov 30th 2017
+### 1.1.15 (Nov 30th 2017)
 - bug fix
 
 ### 1.1.11 (Nov 22th 2017)
