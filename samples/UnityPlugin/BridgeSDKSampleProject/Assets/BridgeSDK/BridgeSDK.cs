@@ -1,33 +1,32 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-// -------------------------------------------------------------------------
 // Bridge client code sample for Unity
 // Copyright Logitech - 2017
-// 
-// This code sample allows Unity to communicate with the Bridge
-// runtime.
-//
-// Note that the Bridge software has to run prior to running
-// this code sample.
-// -------------------------------------------------------------------------
 
+/** \brief MonoBehaviour script giving access to the Bridge API
+ 
+ This component allows Unity to communicate with the Bridge
+ runtime.
+
+ Note that the Bridge software has to run prior to running
+ this code sample.
+*/
 public class BridgeSDK : MonoBehaviour
 {
-    // Singleton for ease of access
     private static BridgeSDK _instance;
+    /// Singleton for ease of access
     public static BridgeSDK Instance { get { return _instance; } }
-
-    // State
+    
+    /// Gives access to the set of API calls.
     public BridgeSDKUnityPlugin bridgeSDK;
     bool initCalled;
 
-    // --------------------------------------------------------------------
-    // Create the singleton and make it visible to other classes
-    // --------------------------------------------------------------------
-
+    /// Allow changing the name from the editor
+    [Tooltip("Change this to your application name")]
+    public string appName;
+    
+    /** \brief Create the singleton and make it visible to other classes
+     */
     private void Awake()
     {
         // If a different instance exists, destroy the object
@@ -38,6 +37,7 @@ public class BridgeSDK : MonoBehaviour
                 bridgeSDK.Shutdown();
             }
 
+            Debug.LogWarning("You seem to have more than one BridgeSDK instance in your scene.");
             Destroy(this.gameObject);
         }
         // If no instance exists, attempt to connect to the Bridge runtime
@@ -48,7 +48,7 @@ public class BridgeSDK : MonoBehaviour
 
             unsafe
             {
-                BridgeEnums.EInitErrorCode errorCode = bridgeSDK.Init();
+                BridgeEnums.EInitErrorCode errorCode = bridgeSDK.Init(appName);
 
                 if (errorCode == BridgeEnums.EInitErrorCode.SUCCESS)
                 {
@@ -66,8 +66,9 @@ public class BridgeSDK : MonoBehaviour
             _instance = this;
         }
     }
-
-    // Make sure we release the connection to the Bridge runtime upon exiting
+    
+    /** \brief Make sure we release the connection to the Bridge runtime upon exiting
+     */
     void OnApplicationQuit()
     {
         if (bridgeSDK != null && initCalled)
@@ -76,20 +77,30 @@ public class BridgeSDK : MonoBehaviour
         }
     }
 
-    // --------------------------------------------------------------------
-    // Example of wrapping functions to make them accessible in the Unity
-    // UI system
-    // --------------------------------------------------------------------
-
-    public void SetKeyboardVisibility(bool visible) {
+    /** \brief Example of wrapping the hand visibility function
+    
+        This is used by the buttons of the UI in the example scene.
+    */
+    public void SetKeyboardVisibility(bool visible)
+    {
         bridgeSDK.SetKeyboardVisibility(visible);
     }
 
-    public void SetHandsVisiblity(bool visible) {
+    /** \brief Example of wrapping the keyboard visibility function
+    
+        This is used by the buttons of the UI in the example scene.
+    */
+    public void SetHandsVisiblity(bool visible)
+    {
         bridgeSDK.SetHandsVisibility(visible);
     }
 
-    public void SetKeyboardSkin(string name) {
+    /** \brief Example of wrapping the keyboard skin function
+    
+        This is used by the buttons of the UI in the example scene.
+    */
+    public void SetKeyboardSkin(string name)
+    {
         bridgeSDK.SetSkin(name);
     }
 }

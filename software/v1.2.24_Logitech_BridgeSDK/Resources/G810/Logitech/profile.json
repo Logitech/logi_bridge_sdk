@@ -1,0 +1,24 @@
+{
+	"keyboard": "G810",
+	"name": "Logitech",
+	"textures": [{
+		"filename": "G810_alb.png",
+		"uniform": "t_albedo"
+	},
+	{
+		"filename": "G810_ao.png",
+		"uniform": "t_ambientOcclusion"
+	},
+	{
+		"filename": "G810_nrm.png",
+		"uniform": "t_normal"
+	},
+	{
+		"filename": "G810_p.png",
+		"uniform": "t_prints"
+	}, 
+	{
+		"filename": "G810_m.png",
+		"uniform": "t_metal"
+	}]
+}

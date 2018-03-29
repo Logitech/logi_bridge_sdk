@@ -1,0 +1,59 @@
+{
+    "keyboardIndex": 0,
+    "keyboards": [
+        {
+            "model": "G810.obj",
+            "name": "G810",
+            "skins": [
+                {
+                    "name": "Logitech",
+					"tag": "default"
+                },
+				{
+                    "name": "Battered",
+					"tag": "alternative"
+                },
+                {
+					"name": "ScifiTech",
+					"tag": "alternative"
+                },
+                {
+                    "name": "VirtualDesktop",
+					"tag": "alternative"
+                },
+                {
+                    "name": "Align",
+					"tag": "hidden"
+                },
+                {
+                    "name": "SkinSwitch",
+					"tag": "hidden"
+                },
+				{
+                    "name": "CrashTest",
+					"tag": "alternative"
+                }
+            ],
+            "videoTooltip": {
+                "rotation": [
+                    315.0,
+                    0.0,
+                    0.0
+                ],
+                "scaling": [
+                    16.0,
+                    2.0,
+                    2.0
+                ],
+                "translation": [
+                    1.5,
+                    -0.75,
+                    1.45
+                ]
+            }
+        }
+    ],
+    "skinIndex": 0,
+    "trackerId": "",
+    "cameraLatency": 110
+}

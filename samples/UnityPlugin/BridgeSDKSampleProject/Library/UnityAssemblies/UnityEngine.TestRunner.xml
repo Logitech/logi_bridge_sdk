@@ -74,21 +74,6 @@
         <para>Platforms the tests can run on.</para>
       </summary>
     </member>
-    <member name="T:UnityEngine.TestTools.UnityPlatformAttribute">
-      <summary>
-        <para>For specifying platforms to run on.</para>
-      </summary>
-    </member>
-    <member name="P:UnityEngine.TestTools.UnityPlatformAttribute.exclude">
-      <summary>
-        <para>Excluded platforms.</para>
-      </summary>
-    </member>
-    <member name="P:UnityEngine.TestTools.UnityPlatformAttribute.include">
-      <summary>
-        <para>Included platforms.</para>
-      </summary>
-    </member>
     <member name="T:UnityEngine.TestTools.UnityTestAttribute">
       <summary>
         <para>Special type of a unit test that allows to yield from test in order to skip frames when the test is running.</para>

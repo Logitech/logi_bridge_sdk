@@ -1,0 +1,8 @@
+{
+	"keyboard": "G810",
+	"name": "Align",
+	"textures": [{
+		"filename": "G810_alb.png",
+		"uniform": "t_albedo"
+	}]
+}

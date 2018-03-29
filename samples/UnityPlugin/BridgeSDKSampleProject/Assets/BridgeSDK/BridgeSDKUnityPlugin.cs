@@ -1,12 +1,17 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System.Runtime.InteropServices;
+﻿using System.Runtime.InteropServices;
 using UnityEngine;
 
+/** \brief Wraps the API functions of the DLL application.
+
+These functions are the one used to interact with Bridge.
+*/
 public class BridgeSDKUnityPlugin {
+#if !DOXYGEN_SKIP
+    [DllImport("BridgeOverlay_SDK_Unity")]
+    unsafe static extern void UInit(byte* returnBuffer, int returnBufferSize, byte* clientName, int nameSize);
 
     [DllImport("BridgeOverlay_SDK_Unity")]
-    unsafe static extern void UInit(byte* returnBuffer, int returnBufferSize);
+    unsafe static extern void UAutoAlignFor(byte* returnBuffer, int returnBufferSize, ushort milliseconds);
 
     [DllImport("BridgeOverlay_SDK_Unity")]
     unsafe static extern void UShutdown(byte* returnBuffer, int returnBufferSize);
@@ -33,9 +38,6 @@ public class BridgeSDKUnityPlugin {
     unsafe static extern void USetAlternativeHandTintOffset(byte* returnBuffer, int returnBufferSize, int handTintOffset);
 
     [DllImport("BridgeOverlay_SDK_Unity")]
-    unsafe static extern void USendIPMessage(byte* returnBuffer, int returnBufferSize, int IPMessage);
-
-    [DllImport("BridgeOverlay_SDK_Unity")]
     unsafe static extern void UGetKeyboardStatus(byte* returnBuffer, int returnBufferSize);
 
     [DllImport("BridgeOverlay_SDK_Unity")]
@@ -48,13 +50,12 @@ public class BridgeSDKUnityPlugin {
     unsafe static extern void USetSkin(byte* returnBuffer, int returnBufferSize, byte* skinName, int nameLength);
 
     [DllImport("BridgeOverlay_SDK_Unity")]
-    unsafe static extern void UNotifyRuntime(byte* returnBuffer, int returnBufferSize, int notification);
+    unsafe static extern void USetAllKeysLEDColor(byte* returnBuffer, int returnBufferSize, int r, int g, int b, int a);
 
     [DllImport("BridgeOverlay_SDK_Unity")]
-    static extern int UPopNotification();
+    unsafe static extern void USetKeyLEDColor(byte* returnBuffer, int returnBufferSize, int keyCode, int r, int g, int b, int a);
 
-
-
+#endif // DOXYGEN_SKIP
 
     int responseBufferSize = 2048;
     byte[] responseBuffer;
@@ -63,31 +64,42 @@ public class BridgeSDKUnityPlugin {
     KeyboardStatusServerJSONResponse keyboardStatusServerResponse;
     HandsStatusServerJSONResponse handsStatusServerResponse;
     SupportedKeyboardsServerJSONResponse supportedKeyboardsServerResponse;
-
-
+    
     public BridgeSDKUnityPlugin()
     {
         responseBuffer = new byte[responseBufferSize];
     }
-	
 
-    public BridgeEnums.EInitErrorCode Init()
+    /** \brief Initializes the API with the backend runtime.
+
+	Uses a blocking call for websocket initialization; call this outside the main thread unless you
+	are ok with it being frozen for a while (especially, if Bridge is not launched this will timeout
+	after several seconds).
+	*/
+    public BridgeEnums.EInitErrorCode Init(string clientName)
     {
+        byte[] clientNameBytes = System.Text.Encoding.ASCII.GetBytes(clientName);
         unsafe
         {
             fixed (byte* responseBufferPtr = &responseBuffer[0])
             {
-                UInit(responseBufferPtr, responseBufferSize);
+                fixed (byte* clientNameBytesPtr = &clientNameBytes[0])
+                {
+                    UInit(responseBufferPtr, responseBufferSize, clientNameBytesPtr, clientNameBytes.Length);
+                }
             }
-            responseAsString = System.Text.Encoding.ASCII.GetString(responseBuffer, 0, responseBuffer.Length); 
+            responseAsString = System.Text.Encoding.ASCII.GetString(responseBuffer, 0, responseBuffer.Length);
         }
 
         // Parse json message we received:
         baseServerResponse = JsonUtility.FromJson<BaseServerJSONResponse>(responseAsString);
         return (BridgeEnums.EInitErrorCode)baseServerResponse.error_code;
-
     }
 
+    /**	\brief Stops the DLL.
+	
+	\ref Init should be called again afterwards if one wants to use the API again.
+	*/
     public BridgeEnums.EShutdownErrorCode Shutdown()
     {
         unsafe
@@ -105,10 +117,8 @@ public class BridgeSDKUnityPlugin {
 
     }
 
-    /// <summary>
-    /// Function to set the keyboard to visible / hidden 
-    /// </summary>
-    /// <param name="visible">True to set to visible, false to set to hidden</param>
+    /**	\brief Sets whether the keyboard should be visible or not.
+	*/
     public BridgeEnums.ESetKeyboardVisibilityErrorCode SetKeyboardVisibility(bool visible)
     {
         unsafe
@@ -125,6 +135,10 @@ public class BridgeSDKUnityPlugin {
         return (BridgeEnums.ESetKeyboardVisibilityErrorCode)baseServerResponse.error_code;
     }
 
+    /**	\brief Gets a list of the available \ref SupportedKeyboard and their respective \ref SupportedSkin list.
+
+	The result is stored in the supplied memory space given as argument.
+	*/
     public BridgeEnums.EGetSupportedKeyboardsErrorCode GetSupportedKeyboards(ref SupportedKeyboards sk)
     {
         unsafe
@@ -147,6 +161,15 @@ public class BridgeSDKUnityPlugin {
         return (BridgeEnums.EGetSupportedKeyboardsErrorCode)supportedKeyboardsServerResponse.error_code;
     }
 
+    /**	\brief Sets a skin for the current keyboard.
+
+	\param skinName The name of the skin to be set
+
+	\returns SUCESS if the skin could be set\n
+	INVALID_INPUT if the provided skin name does not exist\n
+	or other members of \ref BridgeEnums.ESetSkinErrorCode depending on the encountered
+	error.
+	*/
     public BridgeEnums.ESetSkinErrorCode SetSkin(string skinName)
     {
         byte[] skinNameBytes = System.Text.Encoding.ASCII.GetBytes(skinName);
@@ -168,6 +191,10 @@ public class BridgeSDKUnityPlugin {
 
     }
 
+    /**	\brief Sets whether the hands should be visible on top of the keyboard or not.
+
+	If the keyboard is hidden, whether it is on or off has no impact on performances.
+	*/
     public BridgeEnums.ESetHandsVisibilityErrorCode SetHandsVisibility(bool visible)
     {
         unsafe
@@ -185,6 +212,8 @@ public class BridgeSDKUnityPlugin {
 
     }
 
+    /**	\brief Changes the displayed \ref BridgeEnums.EHandsRepresentationMode.
+	*/
     public BridgeEnums.ESetHandsRepresentationModeErrorCode SetHandsRepresentationMode(BridgeEnums.EHandsRepresentationMode eHandsRepresentationMode)
     {
         unsafe
@@ -202,6 +231,10 @@ public class BridgeSDKUnityPlugin {
 
     }
 
+    /** \brief Sets the color for a given \ref BridgeEnums.EHandsRepresentationMode.
+
+	R, G and B should be integers between 0 and 255.
+	*/
     public BridgeEnums.ESetHandsColorErrorCode SetHandsColor(BridgeEnums.EHandsRepresentationMode eHandsRepresentationMode, int colorR, int colorG, int colorB)
     {
         unsafe
@@ -219,6 +252,10 @@ public class BridgeSDKUnityPlugin {
 
     }
 
+    /**	\brief Sets the hand opacity for a given \ref BridgeEnums.EHandsRepresentationMode mode.
+
+	An opacity level of 0 corresponds to 100% transparency.
+	*/
     public BridgeEnums.ESetHandsOpacityErrorCode SetHandsOpacity(BridgeEnums.EHandsRepresentationMode eHandsRepresentationMode, float opacityLevel)
     {
         unsafe
@@ -237,6 +274,9 @@ public class BridgeSDKUnityPlugin {
         return (BridgeEnums.ESetHandsOpacityErrorCode)baseServerResponse.error_code;
     }
 
+#if !DOXYGEN_SKIP // Can be used, but is not exposed in the doc
+    /**	\brief Sets hand tint for the alternative segmentation mode.
+	*/
     public BridgeEnums.ESetAlternativeHandTintOffsetErrorCode SetAlternativeHandTintOffset(int handTintOffset)
     {
         unsafe
@@ -252,23 +292,13 @@ public class BridgeSDKUnityPlugin {
         baseServerResponse = JsonUtility.FromJson<BaseServerJSONResponse>(responseAsString);
         return (BridgeEnums.ESetAlternativeHandTintOffsetErrorCode)baseServerResponse.error_code;
     }
+#endif
 
-    public BridgeEnums.ESendIPMessageErrorCode SendIPMessage(BridgeEnums.EIPMessages IPMessage)
-    {
-        unsafe
-        {
-            fixed (byte* responseBufferPtr = &responseBuffer[0])
-            {
-                USendIPMessage(responseBufferPtr, responseBufferSize, (int)IPMessage);
-            }
-            responseAsString = System.Text.Encoding.ASCII.GetString(responseBuffer, 0, responseBuffer.Length);
-        }
+    /**	\brief Sets the hand segmentation threshold for a given \ref BridgeEnums.EHandsRepresentationMode mode.
 
-        // Parse json message we received:
-        baseServerResponse = JsonUtility.FromJson<BaseServerJSONResponse>(responseAsString);
-        return (BridgeEnums.ESendIPMessageErrorCode)baseServerResponse.error_code;
-    }
-
+	For the default HANDS_SEGMENTATION mode, this represents a lightness threshold above which pixels are displayed.
+	The value is discarded for SEETHRU mode, and represents a hue width value for ALTERNATIVE_SEGMENTATION.
+	*/
     public BridgeEnums.ESetHandsSegmentationThresholdErrorCode SetHandsSegmentationThreshold(BridgeEnums.EHandsRepresentationMode eHandsRepresentationMode, float segmentationThreshold)
     {
         unsafe
@@ -287,6 +317,10 @@ public class BridgeSDKUnityPlugin {
         return (BridgeEnums.ESetHandsSegmentationThresholdErrorCode)baseServerResponse.error_code;
     }
 
+    /**	\brief Gets information about the keyboard visualization.
+
+	The result is stored in the supplied memory space given as argument.
+	*/
     public BridgeEnums.EGetKeyboardStatusErrorCode GetKeyboardStatus(ref KeyboardStatus ks)
     {
         unsafe
@@ -311,6 +345,10 @@ public class BridgeSDKUnityPlugin {
 
     }
 
+    /**	\brief Gets information about the hand visualization.
+
+	The result is stored in the supplied memory space given as argument.
+	*/
     public BridgeEnums.EGetHandsStatusErrorCode GetHandsStatus(ref HandsFeedbackStatus hs)
     {
         unsafe
@@ -338,24 +376,61 @@ public class BridgeSDKUnityPlugin {
 
     }
 
-    public BridgeEnums.ENotifyRuntimeErrorCode NotifyRuntime(BridgeEnums.ENotification message)
+    /** \brief Sets the LED color for all keys.
+
+    R, G and B should be integers between 0 and 255.
+    */
+    public BridgeEnums.ESetAllKeysLEDErrorCode SetAllKeysLEDColor(int colorR, int colorG, int colorB, int colorA)
     {
         unsafe
         {
             fixed (byte* responseBufferPtr = &responseBuffer[0])
             {
-                UNotifyRuntime(responseBufferPtr, responseBufferSize, (int)message);
+                USetAllKeysLEDColor(responseBufferPtr, responseBufferSize, colorR, colorG, colorB, colorA);
             }
             responseAsString = System.Text.Encoding.ASCII.GetString(responseBuffer, 0, responseBuffer.Length);
         }
 
         // Parse json message we received:
         baseServerResponse = JsonUtility.FromJson<BaseServerJSONResponse>(responseAsString);
-        return (BridgeEnums.ENotifyRuntimeErrorCode)baseServerResponse.error_code;
+        return (BridgeEnums.ESetAllKeysLEDErrorCode)baseServerResponse.error_code;
     }
-    
-    public BridgeEnums.ENotification PopNotification()
+
+    /** \brief Sets the LED color for a specific key using keyCode (scan code).
+
+    R, G and B should be integers between 0 and 255.
+    */
+    public BridgeEnums.ESetKeyLEDErrorCode SetKeyLEDColor(int keyCode, int colorR, int colorG, int colorB, int colorA)
     {
-        return (BridgeEnums.ENotification)UPopNotification();
+        unsafe
+        {
+            fixed (byte* responseBufferPtr = &responseBuffer[0])
+            {
+                USetKeyLEDColor(responseBufferPtr, responseBufferSize, keyCode, colorR, colorG, colorB, colorA);
+            }
+            responseAsString = System.Text.Encoding.ASCII.GetString(responseBuffer, 0, responseBuffer.Length);
+        }
+
+        // Parse json message we received:
+        baseServerResponse = JsonUtility.FromJson<BaseServerJSONResponse>(responseAsString);
+        return (BridgeEnums.ESetKeyLEDErrorCode)baseServerResponse.error_code;
+    }
+
+    /**	\brief Starts automatic alignment for a given amount of time.
+	*/
+    public BridgeEnums.EAutoAlignForErrorCode AutoAlignFor(ushort milliseconds)
+    {
+        unsafe
+        {
+            fixed (byte* responseBufferPtr = &responseBuffer[0])
+            {
+                UAutoAlignFor(responseBufferPtr, responseBufferSize, milliseconds);
+            }
+            responseAsString = System.Text.Encoding.ASCII.GetString(responseBuffer, 0, responseBuffer.Length);
+        }
+
+        // Parse json message we received:
+        baseServerResponse = JsonUtility.FromJson<BaseServerJSONResponse>(responseAsString);
+        return (BridgeEnums.EAutoAlignForErrorCode)baseServerResponse.error_code;
     }
 }

@@ -1,0 +1,158 @@
+	<!DOCTYPE HTML>
+	<meta charset="utf-8" />
+	<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+		<script type="text/javascript" src="js/seraphAPI.js"></script>
+		<script type="text/javascript" src="js/client.js"></script>
+		<script type="text/javascript" src="js/rainbow.js"></script>
+	    </head>
+	    <body>
+			<h1>Experimental tweaks</h1>
+			<p>This page shows a set of experimental features. Play with them as you please!</p>
+
+			<!-- Template box
+			<div class="floating-box" title="Template box tooltip">
+				<h1>Title</h1>
+				a: <span id="aDisplay">0</span>
+				<input name="a" type="range" value=0 max=1 step=0.1 oninput="SendSliderUpdate(this.name,this.value)"/><br>
+			</div>
+			-->
+
+			<!-- Test box
+			<div class="floating-box" title="This is a test box">
+				<h1>Set some values</h1>
+				<select id="parameterName">
+					<option value="a">a</option>
+					<option value="b">b</option>
+					<option value="c">c</option>
+				</select>
+				<input id="parameterValue" type="text" placeholder="2.3 / abc / false">
+				<input type="button" value="Set" onclick="SetGenericParameterFromSelect()">
+			</div>
+			-->
+
+			<div class="floating-box" title="Have you tried the Konami Code in the VR Setup?">
+				<p>For some parameters this web page may not be in sync with the actual state of Bridge, as they may have changed from outside this client and, unlike the regular UI, it has no update mechanism.</p>
+				<p>By changing values on this page you force them, so once a slider has moved, or a button has been clicked, its state will be correct.</p>
+				<p>Some boxes, like this one, show tips is you hover them with the mouse.</p>
+			</div>
+
+			<div class="floating-box">
+				<h1>Hand segmentation mode</h1>
+				<a href='javascript:SeraphAPICall("/setHandsRepresentationMode","{\"hands_mode\":\"hands_segmentation\"}")'>Hands Segmentation</a><br>
+				<a href='javascript:SeraphAPICall("/setHandsRepresentationMode","{\"hands_mode\":\"seethru\"}")'>Seethrough</a><br>
+				<a href='javascript:SeraphAPICall("/setHandsRepresentationMode","{\"hands_mode\":\"alternative_segmentation\"}")'>Alt. Segmentation</a><br>
+				<a href='javascript:SeraphAPICall("/setHandsRepresentationMode","{\"hands_mode\":\"luminance_color_segmentation\"}")'>Color Segmentation in GPU</a><br>
+				<a href='javascript:SeraphAPICall("/setHandsRepresentationMode","{\"hands_mode\":\"lookup_texture\"}")'>Lookup Segmentation</a><br>
+				<a href='javascript:SeraphAPICall("/setHandsRepresentationMode","{\"hands_mode\":\"stereo_rendering\"}")'>Stereo Rendering (no hands)</a>
+			</div>
+
+			<div class="floating-box" title="Presets for the lookup segmentation.">
+				<h1>Lookup segmentation presets</h1>
+				<a href='javascript:SeraphAPICall("/setHandsRepresentationMode","{\"hands_mode\":\"lookup_texture\"}")'>Turn lookup segmentation on</a>
+				<br><br>
+
+				Front Window:
+				<input name="useSeethruInAlignMode" type="button" value="SET" onclick="UsePreset(presetCork)"/><br><br>
+				Bad side lighting:
+				<input name="useSeethruInAlignMode" type="button" value="SET" onclick="UsePreset(presetBic)"/><br><br>
+				Mid-dark skin tones:
+				<input name="useSeethruInAlignMode" type="button" value="SET" onclick="UsePreset(presetNalisha)"/><br><br>
+				Dark skin tones:
+				<input name="useSeethruInAlignMode" type="button" value="SET" onclick="UsePreset(presetBruno)"/><br><br>
+			</div>
+
+			<div class="floating-box" title="Affects the lookup segmentation. The last slider has an effect on the overall image, while the first three define the importance of each method. When changing a weight, also change the final threshold to check if the weight change has the desired effect.">
+				<h1>Lookup fusion values</h1>
+				<a href='javascript:SeraphAPICall("/setHandsRepresentationMode","{\"hands_mode\":\"lookup_texture\"}")'>Turn lookup segmentation on</a>
+				<br><br>
+
+				rgWeight: <span id="rgWeightDisplay">0.65</span>
+				<input name="rgWeight" type="range" value=0.65 min=0 max=1 step=0.01 oninput="SendSliderUpdate(this.name,this.value)"/>
+				<br>
+
+				lutWeight: <span id="lutWeightDisplay">1</span>
+				<input name="lutWeight" type="range" value=1 min=0 max=1 step=0.01 oninput="SendSliderUpdate(this.name,this.value)"/>
+				<br>
+
+				posWeight: <span id="posWeightDisplay">0.3</span>
+				<input name="posWeight" type="range" value=0.3 min=0 max=1 step=0.01 oninput="SendSliderUpdate(this.name,this.value)"/>
+				<br>
+
+				lumWeight: <span id="lumWeightDisplay">0.3</span>
+				<input name="lumWeight" type="range" value=1.0 min=0 max=1 step=0.01 oninput="SendSliderUpdate(this.name,this.value)"/>
+				<br>
+
+				finalThresh: <span id="finalThreshDisplay">0.45</span>
+				<input name="finalThresh" type="range" value=0.45 min=0 max=1 step=0.01 oninput="SendSliderUpdate(this.name,this.value)"/>
+				<br>
+			</div>
+
+			<div class="floating-box" title="For calibration to work properly, make sure you have a 5cm space around your keyboard free of clutter.">
+				<h1>Alignment features</h1>
+				Seethrough (vs. red dots):
+				<input name="useSeethruInAlignMode" type="button" value="ON" onclick="ToggleButton(this)"/><br><br>
+				Calibration for 5s:
+				<input name="autoAlignFiveSec" type="button" value="GO" onclick='SeraphAPICall("/autoAlignForMs","{\"time\":5000}")'/><br><br>
+				Calibration can also be triggered using Shift+F1.
+			</div>
+
+			<div class="floating-box" title="These affect both the lookup and regular hand segmentation modes.">
+				<h1>Hand segmentation tweaks</h1>
+				PRE-GAUSS <input name="usePreGauss" type="button" value="ON" onclick="ToggleButton(this)"/><br><br>
+				MORPHO <input name="useMorpho" type="button" value="ON" onclick="ToggleButton(this)"/><br><br>
+				POSITION LIKELIHOOD <input name="usePosition" type="button" value="ON" onclick="ToggleButton(this)"/><br><br>
+
+				Kernel step size: <span id="kernelStepDisplay">1.7</span>
+				<input name="kernelStep" type="range" value=1.7 min=0 max=3 step=0.05 oninput="SendSliderUpdate(this.name,this.value)"/><br>
+			</div>
+
+			<div class="floating-box" title="">
+				<h1>Lag mitigation</h1>
+
+				Use lag compensation:
+				<input name="useLagCompensation" type="button" value="ON" onclick="ToggleButton(this)"/>
+				<br><br>
+				Camera latency: <span id="cameraLatencyDisplay">87</span> ms
+				<input name="cameraLatency" type="range" value=87 min=30 max=130 step=1 oninput="SendSliderUpdate(this.name,this.value)"/>
+				<br><br>
+				Use hand dimming:
+				<input name="useHandDimming" type="button" value="ON" onclick="ToggleButton(this)"/>
+				<br><br>
+				HMD velocity effect amplitude: <span id="handsVelocityEffectAmplitudeDisplay">0.8</span>
+				<input name="handsVelocityEffectAmplitude" type="range" value=0.8 min=0 max=1 step=0.1 oninput="SendSliderUpdate(this.name,this.value)"/>
+			</div>
+
+			<div class="floating-box" title="">
+				<h1>Tracker freezing</h1>
+				Freeze tracker position:
+				<input name="freezeTracker" type="button" value="OFF" onclick="ToggleButton(this)"/><br><br>
+			</div>
+
+			<div class="floating-box" title="Template box tooltip">
+				<h1>Lighting</h1>
+				<p>
+					<form>
+						R <input type="number" value="100" id="LED_R" style="width:30pt;"/>
+						G <input type="number" value="100" id="LED_G" style="width:30pt;"/>
+						B <input type="number" value="100" id="LED_B" style="width:30pt;"/>
+						A <input type="number" value="0" id="LED_A" style="width:30pt;"/>
+
+						<button type="button" onclick="SetAllKeysLED()">Set All Keys LED</button>
+
+						<!-- Such br, very CSS, wow -->
+						<br><br><br>
+
+						KeyCode <input type="number" value="65" id="LED_CODE" style="width:100%;"/>
+						<button type="button" style="width:85pt;" onclick="SetKeyLED()">Set Key LED</button>
+					</form>
+				</p>
+				<p style="margin-top:50pt">
+					Rainbow:
+					<input name="rainbow" type="button" value="OFF" onclick="ToggleButton(this)"/>
+				</p>
+			</div>
+	    </body>
+	</html>

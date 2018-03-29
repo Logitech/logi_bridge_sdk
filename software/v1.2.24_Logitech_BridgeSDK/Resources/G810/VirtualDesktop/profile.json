@@ -1,0 +1,12 @@
+{
+	"keyboard": "G810",
+	"name": "VirtualDesktop",
+	"textures": [{
+		"filename": "G810_alb.png",
+		"uniform": "t_albedo"
+	},
+	{
+		"filename": "G810_p.png",
+		"uniform": "t_prints"
+	}]
+}

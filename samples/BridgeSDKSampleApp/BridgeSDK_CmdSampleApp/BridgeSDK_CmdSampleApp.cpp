@@ -14,6 +14,10 @@ void displayHelpMessage();
 
 int main()
 {
+#ifdef _DEBUG
+	cout << "// ----------------------------------------------------------------------------------------" << endl;
+	cout << "// WARNING: in Debug mode, this sample app might not work fully." << endl;
+#endif
 	cout << "// ----------------------------------------------------------------------------------------" << endl;
 	cout << "// Logitech Bridge SDK: Command line sample application" << endl;
 	cout << "// Copyrights Logitech - 2017\n"<< endl;
@@ -24,7 +28,7 @@ int main()
 	cout << "// ----------------------------------------------------------------------------------------\n" << endl;
 
 	bool quitApp = false;
-	EInitErrorCode initServerResponse = Init();
+	EInitErrorCode initServerResponse = Init("sampleCmdApplication");
 
 	// Attempt to make the connection to the Bridge runtime
 	if ((int)initServerResponse == 0) {
@@ -248,6 +252,46 @@ int main()
 
 						break;
 					}
+
+					// Lighting demo
+					case 'k':
+					{
+						int keyCodesArray[] = { 65, 83, 68, 70, 71, 72, 74, 75, 76 };
+						SetAllKeysLEDColor(50, 50, 50, 100);
+
+						for (int i = 0; i < 9 ; i++) {
+							SetKeyLEDColor(keyCodesArray[i], 255, 0, 0, 100);
+							std::this_thread::sleep_for(std::chrono::milliseconds(50));
+							SetKeyLEDColor(keyCodesArray[i], 50, 50, 50, 100);
+						}
+
+						std::this_thread::sleep_for(std::chrono::milliseconds(50));
+
+						for (int i = 0; i < 9; i++) {
+							SetKeyLEDColor(keyCodesArray[8 - i], 255, 0, 0, 100);
+							std::this_thread::sleep_for(std::chrono::milliseconds(50));
+							SetKeyLEDColor(keyCodesArray[8 - i], 50, 50, 50, 100);
+						}
+
+						// What really matters here is the 0 alpha, meaning that we resume the
+						// skin-defined color for each key print
+						SetAllKeysLEDColor(255, 255, 255, 0);
+
+                        break;
+					}
+					case 'j':
+					{
+						EAutoAlignForErrorCode autoAlignForServerResponse = AutoAlignFor(5000);
+
+						if (autoAlignForServerResponse == EAutoAlignForErrorCode::SUCCESS) {
+							cout << ">> Server -> Automatic alignment started for 5s" << endl;
+						}
+						else {
+							cout << ">> Server -> Starting auto alignment returned an error: " << (int)autoAlignForServerResponse << endl;
+						}
+
+						break;
+					}
 				}
 			}
 			std::this_thread::sleep_for(std::chrono::milliseconds(100));
@@ -265,10 +309,12 @@ int main()
 	return 0;
 }
 
+// Helper message display function
 void displayHelpMessage() {
 	cout <<
 		">> Available shortcuts:\n\n" <<
 		"\t'x' : Stop the application.\n" <<
+		"\t'h' : Shows this help message.\n" <<
 		"\t'q' : Display the keyboard.\n" <<
 		"\t'w' : Hide the keyboard.\n" <<
 		"\t'e' : Set the hands representation mode to 'HANDS_SEGMENTATION'.\n" <<
@@ -277,14 +323,15 @@ void displayHelpMessage() {
 		"\t'u' : Set the hands segmentation threshold to 30%.\n" <<
 		"\t'i' : Set the hands segmentation threshold to 10%.\n" <<
 #ifndef _DEBUG
-		"\t'a' : Update the KeyboardStatus instance you passed as a parameter.\n" <<
-		"\t's' : Update the HandsStatus instance you passed as a parameter.\n" <<
+		"\t'a' : Update the KeyboardStatus instance passed as a parameter and print it.\n" <<
+		"\t's' : Update the HandsStatus instance passed as a parameter and print it.\n" <<
 #endif
 		"\t'f' : Set opacity level to 70% ('HANDS_SEGMENTATION' mode).\n" <<
 #ifndef _DEBUG
 		"\t'g' : Get supported keyboards.\n" <<
 #endif
-		"\t'c' : Set skin.\n"
+		"\t'c' : Set skin.\n" <<
+		"\t'j' : Toggle automatic alignment for 5 seconds.\n" <<
+		"\t'k' : Toggle Kit 2000\n"
 		<< endl;
 }
-
