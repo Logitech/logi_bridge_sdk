@@ -1,6 +1,6 @@
 # Logitech G BridgeSDK
 
-- Beta version [**2.0**](https://github.com/Logitech/logi_bridge_sdk/releases) (released on Aug 22th 2018)
+- Beta version [**2.0**](https://github.com/Logitech/logi_bridge_sdk/blob/master/software/README.md) (released on Aug 22th 2018)
 - Contact: supportsdk@logitech.com
 - Instructions [wiki](https://github.com/Logitech/logi_bridge_sdk/wiki)
 <br/>
