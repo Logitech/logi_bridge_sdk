@@ -1,8 +1,0 @@
-{
-	"keyboard": "G810",
-	"name": "Battered",
-	"textures": [{
-		"filename": "G810_alb.png",
-		"uniform": "t_albedo"
-	}]
-}
